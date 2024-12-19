@@ -1,0 +1,53 @@
+
+#searchClient {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+#searchClientForm, #clientSearchResult {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+.btn {
+
+    background-color: #007bff; /* Cor de fundo azul */
+
+    color: white; /* Cor do texto */
+
+    border: none; /* Remove a borda padrão */
+
+    border-radius: 5px; /* Bordas arredondadas */
+
+    padding: 10px 15px; /* Espaçamento interno */
+
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+
+}
+
+
+.btn:hover {
+
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+
+}
+#clientSearchResult {
+
+    margin-top: 20px;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    background-color: #f9f9f9;
+
+}

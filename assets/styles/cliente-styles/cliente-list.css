@@ -1,0 +1,139 @@
+
+/* Estilo para a seção de Lista de Clientes */
+#listClients {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+#listClients h2 {
+    margin: 0 0 10px;
+    font-family: 'Arial', sans-serif; /* Fonte mais amigável */
+    color: #333; /* Cor do texto */
+}
+
+#toggleClientList {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+#toggleClientList:hover {
+    background-color: #0056b3;
+}
+
+
+ /* CSS para estilização da tabela */
+
+ #clientTable {
+
+    width: 100%; /* Largura total da tabela */
+
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+
+    border-radius: 10px; /* Bordas arredondadas para a tabela */
+
+    overflow: hidden; /* Garante que as bordas arredondadas sejam aplicadas */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para a tabela */
+
+}
+
+
+#clientTable thead {
+
+    background-color: #007bff; /* Cor de fundo do cabeçalho */
+
+    color: white; /* Cor do texto do cabeçalho */
+
+}
+
+
+#clientTable th, #clientTable td {
+
+    padding: 12px 15px; /* Espaçamento interno das células */
+
+    text-align: left; /* Alinhamento do texto à esquerda */
+
+    border-bottom: 1px solid #ddd; /* Borda inferior das células */
+
+}
+
+
+#clientTable th {
+
+    font-weight: bold; /* Negrito para o cabeçalho */
+
+    text-transform: uppercase; /* Texto em maiúsculas */
+    color: #333;
+
+}
+
+
+#clientTable tr:hover {
+
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre a linha */
+
+}
+
+
+#clientTable tr:last-child td {
+
+    border-bottom: none; /* Remove a borda inferior da última linha */
+
+}
+
+
+#clientTable td {
+
+    color: #333; /* Cor do texto das células */
+
+}
+
+
+#clientTable tr:nth-child(even) {
+
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+
+}
+
+
+#clientTable tr:nth-child(odd) {
+
+    background-color: #ffffff; /* Cor de fundo para linhas ímpares */
+
+}
+
+/*Estilo do botao buscar cliente*/
+
+/*Deixa o botao oculto*/
+#fetchClientsButton{
+    display: none;
+}
+#fetchClientsButton {
+    
+
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-top: 10px; /* Espaçamento acima do botão */
+
+}
+
+
+#fetchClientsButton:hover {
+
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+
+}
