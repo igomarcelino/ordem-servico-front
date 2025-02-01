@@ -51,3 +51,18 @@
     background-color: #f9f9f9;
 
 }
+
+#backToMenu3{
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+#backToMenu3:hover{
+    background-color: #0056b3;
+}

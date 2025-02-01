@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gerenciamento de Ordens de Serviço</title>
+    <link rel="stylesheet" href="assets/styles/login-styles/style.css">
+    <script>
+        function login(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (!username || !password) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+            
+            const authHeader = 'Basic ' + btoa(username + ':' + password);
+            sessionStorage.setItem('authHeader', authHeader);
+            
+            fetch('http://192.168.3.104:8080/', {
+                method: 'GET',
+                headers: { 'Authorization': authHeader }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Usuário ou senha inválidos!');
+                }
+            }).catch(error => console.error('Erro:', error));
+            console.log(authHeader)
+        }
+    </script>
+</head>
+<body>
+    <h1>Ordem de Servico</h1>
+    <img src="https://www.codesoftware.com.br/images/ordem-servico.png" alt="imagem ordem de servico">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="login(event)">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

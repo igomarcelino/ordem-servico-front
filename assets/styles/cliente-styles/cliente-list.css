@@ -114,9 +114,7 @@
 /*Estilo do botao buscar cliente*/
 
 /*Deixa o botao oculto*/
-#fetchClientsButton{
-    display: none;
-}
+
 #fetchClientsButton {
     
 
@@ -136,4 +134,19 @@
 
     background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 
+}
+
+#backToMenu2{
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+#backToMenu2:hover{
+    background-color: #0056b3;
 }

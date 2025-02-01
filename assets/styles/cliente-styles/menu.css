@@ -1,0 +1,91 @@
+/* menu.css */
+
+/* Estilos para a barra de menu */
+.menu-bar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu-bar button {
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-bar button:hover {
+    background-color: #575757;
+}
+
+/* Estilos para as seções */
+.section {
+    display: none; /* Esconde todas as seções por padrão */
+}
+
+.active {
+    display: block; /* Exibe a seção ativa */
+}
+
+/* Estilos adicionais para o formulário e tabela */
+form {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.new-menu {
+    margin-top: 20px;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.submenu {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.menu-bar button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-bar button:hover {
+    background-color: #0056b3;
+}
+
+.submenu {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

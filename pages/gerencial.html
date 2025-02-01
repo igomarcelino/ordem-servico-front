@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/cliente-styles/cliente-add.css">
+    <link rel="stylesheet" href="../assets/styles/cliente-styles/cliente-list.css">
+    <link rel="stylesheet" href="../assets/styles/cliente-styles/cliente-id.css">
+    <link rel="stylesheet" href="../assets/styles/cliente-styles/menu.css"> <!-- Referenciando o novo CSS -->
+    <link rel="stylesheet" href="../assets/styles/new-menu.css"> <!-- CSS para o novo menu -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/cliente.js" defer></script>
+    <script src="../assets/js/new-menu.js" defer></script> <!-- Referenciando o novo JS -->
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul class="menu">
+                <li><a href="gerencial.html">Clientes</a></li>
+                <li><a href="funcionario.html">Funcionários</a></li>
+                <li><a href="ordem-servico.html">Ordens de Serviço</a></li>
+                <li><a href="pagamento.html">Pagamentos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header class="header">
+                <h1>Gerencial</h1>
+                <br>
+                <p>Selecione uma opção abaixo:</p>
+            </header>
+
+            <div class="new-menu">
+                <h2>Opcoes</h2>
+                <div class="menu-bar">
+                    <button id="toggleCadastro">Cadastro</button>
+                    <button id="toggleBuscar">Buscar</button>
+                    <button id="toggleDeletar">Excluir</button>
+                    <button id="toggleAtualizar">Atualizar</button>
+
+                </div>
+                <div id="cadastroOptions" class="submenu" style="display: none;">
+                    <button id="showAddClient">Adicionar Cliente</button>
+                    
+                </div>
+                <div id="buscarOptions" class="submenu" style="display: none;">
+                    <button id="showSearchClient">Buscar Cliente por ID</button>
+                    <button id="showSearchByCpf">Buscar Cliente por CPF</button>
+                    <button id="showListClients">Lista de Clientes</button> <!-- Novo botão -->
+                </div>
+                <div id="deletarOptions" class="submenu" style="display: none;">
+                    <button id="showDeletarById">Deletar por cpf</button>
+                </div>
+            </div>
+
+            <section id="addClient" class="section">
+                <h2>Adicionar Cliente</h2>
+                <button id="backToMenu1">Voltar</button>
+                <form id="addClientForm">
+                    <input type="text" id="clientNome" placeholder="Nome" required>
+                    <input type="text" id="clientCpf" placeholder="CPF" required>
+                    <input type="text" id="clientTelefone" placeholder="Telefone" required>
+                    <input type="email" id="clientEmail" placeholder="Email" required>
+                    <input type="text" id="clientRua" placeholder="Rua" required>
+                    <input type="text" id="clientNumero" placeholder="Número" required>
+                    <input type="text" id="clientComplemento" placeholder="Complemento">
+                    <input type="text" id="clientBairro" placeholder="Bairro" required>
+                    <input type="text" id="clientCidade" placeholder="Cidade" required>
+                    <input type="text" id="clientEstado" placeholder="Estado" required>
+                    <input type="text" id="clientCep" placeholder="CEP" required>
+                    <button type="submit">Salvar Cliente</button>
+                </form>
+            </section>
+
+            <section id="listClients" class="section">
+                <h2>Lista de Clientes</h2>
+                <button id="backToMenu2">Voltar</button>
+                <button id="fetchClientsButton" onclick="fetchClients()">Buscar Clientes</button>
+                <table id="clientTable">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientList"></tbody>
+                </table>
+            </section>
+
+            <section id="searchClient" class="section">
+                <h2>Buscar Cliente por ID</h2>
+                <button id="backToMenu3">Voltar</button>
+                <div id="searchClientForm" style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; background-color : #f9f9f9;">
+                    <input type="text" id="searchClientId" placeholder="Digite o ID do Cliente" required>
+                    <button id="searchClientButton">Buscar</button>
+                </div>
+                <div id="searchResult" style="margin-top: 15px;"></div>
+            </section>
+
+            <section id="searchByCpf" class="section" style="display: none;"> <!-- Nova seção para busca por CPF -->
+                <h2>Buscar Cliente por CPF</h2>
+                <button id="backToMenu4">Voltar</button>
+                <div id="searchByCpfForm" style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; background-color : #f9f9f9;">
+                    <input type="text" id="searchClientCpf" placeholder="Digite o CPF do Cliente" required>
+                    <button id="searchClientByCpfButton">Buscar</button>
+                </div>
+                <div id="searchByCpfResult" style="margin-top: 15px;"></div>
+            </section>
+
+            <!-- Deletar por ID -->
+            
+            <section id="deleteById" class="section" style="display: none;">
+                <h2>Deletar cliente por ID</h2>
+                <div id="searchClientForm" style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; background-color : #f9f9f9;">
+                    <input type="text" id="inputDeleteClienteById" placeholder="Informe o id" required>
+                    <button id="deleteByIDButton">Buscar</button>
+                </div>
+                <div id="searchResultDelete" style="margin-top: 15px;"></div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
